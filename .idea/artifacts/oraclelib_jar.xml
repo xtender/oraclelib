@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="oraclelib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/oraclelib_jar</output-path>
+    <root id="archive" name="oraclelib.jar">
+      <element id="module-output" name="oraclelib" />
+      <element id="extracted-dir" path="C:/Java/ext/common-lang/commons-lang3-3.3.2-bin/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Java/ext/ojdbc_12c/ojdbc7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
