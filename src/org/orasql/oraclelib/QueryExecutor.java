@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@SuppressWarnings("unused")
 public class QueryExecutor {
     private static final Logger logger = LoggerFactory.getLogger(QueryExecutor.class);
 
@@ -54,7 +55,6 @@ public class QueryExecutor {
         resultSetFormatter.printRS();
         resultSet.close();
     }
-
 
     public void execute() throws SQLException {
         this.resultSet = this.getStatement().executeQuery(this.query);

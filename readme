@@ -1,0 +1,16 @@
+# maven installing ojdbc:
+
+# ojdbc6
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=12.1.0.2 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=12.1.0.1 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.4 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
+
+# ojdbc7
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=12.1.0.2 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=12.1.0.1 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.4 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
+
+# UCP:
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ucp -Dversion=12.1.0.2 -Dpackaging=jar -Dfile=ucp.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ucp -Dversion=12.1.0.1 -Dpackaging=jar -Dfile=ucp.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ucp -Dversion=11.2.0.4 -Dpackaging=jar -Dfile=ucp.jar -DgeneratePom=true

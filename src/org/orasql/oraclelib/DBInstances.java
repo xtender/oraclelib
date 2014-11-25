@@ -3,7 +3,6 @@ package org.orasql.oraclelib;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,11 +13,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 public class DBInstances {
     private static final Logger logger = LoggerFactory.getLogger(DBInstances.class);
 
     private static DBInstances instance;
-    private Map<String,DBInstance> dbInstanceMap = new HashMap<String,DBInstance>();
+    private Map<String,DBInstance> dbInstanceMap = new HashMap<>();
 
     private DBInstances() {
     }
@@ -66,7 +66,7 @@ public class DBInstances {
             logger.debug("{}: loaded {} records from {}", DBInstances.class, getInstance().dbInstanceMap.size(), file);
         } catch (FileNotFoundException e) {
             logger.error(e.getMessage(),e);
-            getInstance().dbInstanceMap = new HashMap<String,DBInstance>();
+            getInstance().dbInstanceMap = new HashMap<>();
         }
     }
 
