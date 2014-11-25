@@ -70,7 +70,7 @@ public class DBInstances {
         }
     }
 
-    public static void saveToJson(String file){
+    public static void saveToJson(String file) throws IOException {
         Gson gson = new GsonBuilder().create();
         String json = gson.toJson(getInstance().dbInstanceMap);
         try {
@@ -81,6 +81,7 @@ public class DBInstances {
         } catch (IOException e) {
             //e.printStackTrace();
             logger.error(e.getMessage(), e);
+            throw e;
         }
     }
 

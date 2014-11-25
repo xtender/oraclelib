@@ -20,7 +20,7 @@ public class DBInstance {
     private String username;
     private String userpass;
 
-    private PoolDataSource pds;
+    private transient PoolDataSource pds;
     private transient OracleConnection connection;
 
     private static final int POOL_INITIAL_SIZE = 1;
