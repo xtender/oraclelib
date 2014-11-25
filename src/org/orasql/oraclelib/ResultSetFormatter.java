@@ -170,11 +170,16 @@ public class ResultSetFormatter {
     }
 
     public void printRS() throws SQLException {
+        System.out.println(getFormattedRS());
+    }
+
+    public String getFormattedRS() throws SQLException {
+        StringBuilder stringBuilder = new StringBuilder();
         ResultSetMetaData metaData = rs.getMetaData();
         int colCount = metaData.getColumnCount();
 
-        System.out.println(this.formatHeader());
-        System.out.println(this.br());
+        stringBuilder.append(this.formatHeader());
+        stringBuilder.append(this.br());
 
         while (rs.next()){
             String[] fields = new String[colCount];
@@ -186,8 +191,9 @@ public class ResultSetFormatter {
             for(int i=1;i<=colCount;i++){
                 line += fields[i-1] + Props.getValue("format.set.colseparator"," ");
             }
-            System.out.println(line);
+            stringBuilder.append(line);
         }
+        return stringBuilder.toString();
     }
 
 }
